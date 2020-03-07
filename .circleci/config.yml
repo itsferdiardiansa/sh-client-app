@@ -94,8 +94,8 @@ workflows:
           #   - Integration-Test
           filters:
             branches:
-              only: 
-                - /build/\./
+              only:
+                - /build./
       - Deploy-To-AWS:
           filters:
             branches:
