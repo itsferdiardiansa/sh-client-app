@@ -90,8 +90,6 @@ workflows:
                 - master
                 - build/.*
       - Build-Web-App-Image:
-          # requires:
-          #   - Integration-Test
           filters:
             branches:
               only: 
