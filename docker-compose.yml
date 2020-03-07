@@ -32,11 +32,6 @@ services:
     image: ferdiardiansa/social-media:latest
     env_file:
       - .env
-    # volumes:
-    #   - ./:/usr/app
-    #   - /usr/app/node_modules
-    # ports:
-    #   - ${APP_CLIENT_PORT}:3000
     networks:
       - app-client-network
 

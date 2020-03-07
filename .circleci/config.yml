@@ -43,16 +43,10 @@ jobs:
             - bm-v1-dependencies-{{ checksum "package.json" }}
             - bm-v1-dependencies-
       - run:
-          name: 'Docker daemon'
-          command: |
-            docker images
-            ls -l 
-
-      - run:
           name: 'Create docker image'
           command: |
-            # mv .env.example .env
-            # docker-compose build client-app
+            mv .env.example .env
+            docker-compose build client-app
             docker-compose run client-app build
             docker-compose build client-app-prod
             docker images
