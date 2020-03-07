@@ -88,13 +88,14 @@ workflows:
             branches:
               ignore: 
                 - master
+                - /build/\./
       - Build-Web-App-Image:
-          requires:
-            - Integration-Test
+          # requires:
+          #   - Integration-Test
           filters:
             branches:
-              ignore: 
-                - master
+              only: 
+                - /build/\./
       - Deploy-To-AWS:
           filters:
             branches:
