@@ -1,0 +1,108 @@
+version: 2.1
+orbs:
+  node: circleci/node@1.1.6
+jobs:
+  Integration-Test:
+    machine: true
+    working_directory: ~/app
+
+    steps:
+      - checkout
+
+      # Download and cache dependencies
+      - restore_cache:
+          keys:
+            - pm-v1-dependencies-{{ checksum "package.json" }}
+            - pm-v1-dependencies
+      
+      - run: 
+          name: Build image 
+          command: |
+            mv .env.example .env
+            docker-compose build client-app
+      
+      - save_cache:
+            paths:
+              - node_modules
+            key: pm-v1-dependencies-{{ checksum "package.json" }}
+      
+      - run:
+          name: 'Test'
+          command: |
+            docker-compose run client-app integration:test
+  
+  Build-Web-App-Image:
+    machine: true
+    working_directory: ~/app
+
+    steps: 
+      - checkout
+
+      - restore_cache:
+          keys:
+            - bm-v1-dependencies-{{ checksum "package.json" }}
+            - bm-v1-dependencies-
+      - run:
+          name: 'Docker daemon'
+          command: |
+            docker images
+            ls -l 
+
+      - run:
+          name: 'Create docker image'
+          command: |
+            # mv .env.example .env
+            # docker-compose build client-app
+            docker-compose run client-app build
+            docker-compose build client-app-prod
+            docker images
+
+      - save_cache:
+          paths:
+            - node_modules
+            - docker
+          key: bm-v1-dependencies-
+      
+      - run:
+          name: 'Login to docker hub'
+          command: |
+            docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+
+      - run:
+          name: 'Push to docker hub'
+          command: |
+            docker push ferdiardiansa/social-media:latest
+    
+  Deploy-To-AWS:
+    machine: true
+    working_directory: ~/app
+
+    steps:
+      - checkout
+      
+      - run: 
+          name: 'Connect to AWS EC2'
+          command: |
+            ls -l
+
+workflows:
+  version: 2
+  Dock_Workflow:
+    jobs:
+      - Integration-Test:
+          filters:
+            branches:
+              ignore: 
+                - master
+      - Build-Web-App-Image:
+          requires:
+            - Integration-Test
+          filters:
+            branches:
+              ignore: 
+                - master
+      - Deploy-To-AWS:
+          filters:
+            branches:
+              only: master
+              

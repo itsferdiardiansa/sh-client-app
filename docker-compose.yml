@@ -1,10 +1,10 @@
-version: '3.7'
+version: '3.2'
 services:
   client-app:
     container_name: client-app
     build: 
       context: .
-      dockerfile: './docker/app/Dockerfile'
+      dockerfile: '.docker/app/Dockerfile'
       cache_from:
         - node
       args:
@@ -23,7 +23,7 @@ services:
     container_name: client-app-prod
     build: 
       context: .
-      dockerfile: './docker/app/production.Dockerfile'
+      dockerfile: '.docker/app/production.Dockerfile'
       cache_from:
         - node
         - nginx:latest
