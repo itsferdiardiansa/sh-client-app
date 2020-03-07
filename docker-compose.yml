@@ -1,0 +1,44 @@
+version: '3.7'
+services:
+  client-app:
+    container_name: client-app
+    build: 
+      context: .
+      dockerfile: './docker/app/Dockerfile'
+      cache_from:
+        - node
+      args:
+        - NODE_ENV=${NODE_ENV}
+    env_file:
+      - .env
+    volumes:
+      - ./:/usr/app
+      - /usr/app/node_modules
+    ports:
+      - ${APP_CLIENT_PORT}:3000
+    networks:
+      - app-client-network
+  
+  client-app-prod:
+    container_name: client-app-prod
+    build: 
+      context: .
+      dockerfile: './docker/app/production.Dockerfile'
+      cache_from:
+        - node
+        - nginx:latest
+      args:
+        - NODE_ENV=production
+    image: ferdiardiansa/social-media:latest
+    env_file:
+      - .env
+    # volumes:
+    #   - ./:/usr/app
+    #   - /usr/app/node_modules
+    # ports:
+    #   - ${APP_CLIENT_PORT}:3000
+    networks:
+      - app-client-network
+
+networks:
+  app-client-network:
