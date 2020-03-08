@@ -1,11 +1,11 @@
 import React from 'react'
 import CommentItem from '@/components/comments/Item'
 
-const CommentLists = () => (
+const CommentLists = ({ comments }) => (
   <React.Fragment>
     {
-      [1,2,3].map((el, key) => (
-        <CommentItem key={key} />
+      comments.map((item, key) => (
+        <CommentItem key={key} {...item} />
       ))
     }
   </React.Fragment>

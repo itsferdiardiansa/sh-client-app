@@ -1,5 +1,6 @@
 import { takeLatest, put, call, all } from 'redux-saga/effects'
 import { fetchRequestSuccess, fetchRequestFailure } from './actions'
+import { fetchRequest as fetchComments } from '@store/comments/actions'
 import {
   FETCH_REQUEST_START
 } from './types'

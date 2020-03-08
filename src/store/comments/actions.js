@@ -1,8 +1,7 @@
 import {
   FETCH_REQUEST_START,
   FETCH_REQUEST_SUCCESS,
-  FETCH_REQUEST_FAILURE,
-  SET_POST_COMMENT
+  FETCH_REQUEST_FAILURE
 } from './types'
 
 export const fetchRequest = params => ({
@@ -18,9 +17,4 @@ export const fetchRequestSuccess = items => ({
 export const fetchRequestFailure = error => ({
   type: FETCH_REQUEST_FAILURE,
   payload: error
-})
-
-export const setPostComments = comments => ({
-  type: SET_POST_COMMENT,
-  payload: comments
 })

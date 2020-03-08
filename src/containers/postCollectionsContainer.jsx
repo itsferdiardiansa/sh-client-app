@@ -26,7 +26,7 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-  getPost: () => dispatch(fetchRequest())
+  getPost: () => dispatch(fetchRequest({postId: undefined}))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(PostCollectionContainer)

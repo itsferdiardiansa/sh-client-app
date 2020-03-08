@@ -17,9 +17,9 @@ class PostDetailCollectionContainer extends Component {
     return(
       <React.Fragment>
         {
-          (!postData.isFetching)
+          (postData.isFetching !== null && !postData.isFetching)
           ? <PostItem {...postData.response} />
-          : null 
+          : null
         }
       </React.Fragment>
     )
@@ -27,7 +27,8 @@ class PostDetailCollectionContainer extends Component {
 }
 
 const mapStateToProps = state => ({
-  postData: state.post
+  postData: state.post,
+  commentsData: state.comments
 })
 
 const mapDispatchToProps = dispatch => ({

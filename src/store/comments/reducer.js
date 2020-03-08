@@ -1,17 +1,16 @@
 import {
   FETCH_REQUEST_START,
   FETCH_REQUEST_SUCCESS,
-  FETCH_REQUEST_FAILURE,
-  SET_POST_COMMENT
+  FETCH_REQUEST_FAILURE
 } from './types'
 
 const INITIAL_STATE = {
-  isFetching: null,
+  isFetching: false,
   onError: {},
-  response: {},
+  response: {}
 }
 
-export const postReducer = (state = INITIAL_STATE, action) => {
+export const commentsReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case FETCH_REQUEST_START:
       return {
@@ -30,12 +29,9 @@ export const postReducer = (state = INITIAL_STATE, action) => {
         isFetching: false,
         onError: action.payload
       }
-    case SET_POST_COMMENT:
-      debugger
-      break
     default:
       return state
   }
 }
 
-export default postReducer
+export default commentsReducer

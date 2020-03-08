@@ -16,7 +16,9 @@ const PostItem = ({id, userId, title, body}) => {
         body={body} 
       />
 
-      <Comments />
+      <Comments
+        postId={id}
+      />
     </div>
   )
 }
