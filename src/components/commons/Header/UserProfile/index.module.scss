@@ -1,0 +1,21 @@
+.User-profile {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  &__photo {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #fff;
+    margin-right: 10px;
+    overflow: hidden;
+
+    img {
+      width: auto;
+      height: auto;
+      min-width: 100%;
+      min-height: 100%;
+    }
+  }
+}
