@@ -1,7 +1,11 @@
 import React from 'react'
+import AlbumsCollectionsContainer from '@containers/albumsCollectionsContainer'
+import styles from './index.module.scss'
 
-const Albums = () => (
-  <h1>Albums page</h1>
+const AlbumsPage = () => (
+  <div className={styles['Container']}>
+    <AlbumsCollectionsContainer />
+  </div>
 )
 
-export default Albums
+export default AlbumsPage

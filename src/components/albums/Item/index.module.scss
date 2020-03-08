@@ -1,0 +1,31 @@
+.Item {
+  width: 150px;
+  height: 150px;
+  border: 1px solid #dadade;
+  background-color: #fff;
+  float: left;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  position: relative;
+
+  .Link {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    z-index: 2;
+  }
+
+  &__cover {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+
+    svg {
+      width: 80%;
+    }
+  }
+}

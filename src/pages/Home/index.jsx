@@ -1,9 +1,11 @@
 import React from 'react'
-import PostList from '@/components/posts/Lists'
 import styles from './index.module.scss'
+import PostCollectionsContainer from '@containers/postCollectionsContainer'
 
-const Home = () => (
-  <PostList />
+const HomePage = () => (
+  <div className={styles['Container']}>
+    <PostCollectionsContainer />
+  </div>
 )
 
-export default Home
+export default HomePage

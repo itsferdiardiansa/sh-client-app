@@ -1,7 +1,11 @@
 import React from 'react'
+import styles from './index.module.scss'
+import PhotossCollectionsContainer from '@containers/photossCollectionsContainer'
 
-const Photos = () => (
-  <h1>Photos page</h1>
+const PhotosPage = () => (
+  <div className={styles['Container']}>
+    <PhotossCollectionsContainer />
+  </div>
 )
 
-export default Photos
+export default PhotosPage

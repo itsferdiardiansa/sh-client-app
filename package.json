@@ -54,5 +54,8 @@
       "^@utils/(.*)$": "<rootDir>/src/utils/$1",
       "^@helpers/(.*)$": "<rootDir>/src/helpers/$1"
     }
+  },
+  "devDependencies": {
+    "redux-logger": "^3.0.6"
   }
 }

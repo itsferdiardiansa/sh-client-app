@@ -17,11 +17,24 @@ const routes = [
   },
   {
     path: '/albums',
-    component: lazy(() => import('@/pages/Albums'))
+    component: lazy(() => import('@/pages/Albums')),
+    exact: true
   },
   {
-    path: '/photos',
-    component: lazy(() => import('@/pages/Photos'))
+    path: '/albums/:albumsId',
+    component: lazy(() => import('@/pages/Photos')),
+    exact: true
+  },
+  {
+    path: '/posts/:postId',
+    component: lazy(() => import('@/pages/Detail')),
+    exact: true,
+    routes: []
+  },
+  {
+    path: '/edit/:postId',
+    component: lazy(() => import('@/pages/EditPost')),
+    exact: true
   },
   {
     component: lazy(() => import('@/pages/404'))

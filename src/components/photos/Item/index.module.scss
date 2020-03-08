@@ -1,0 +1,20 @@
+.Item {
+  width: 150px;
+  height: 150px;
+  border: 1px solid #dadade;
+  background-color: #fff;
+  float: left;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+
+  &__cover {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+
+    svg {
+      width: 80%;
+    }
+  }
+}

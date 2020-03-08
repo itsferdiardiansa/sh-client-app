@@ -1,0 +1,9 @@
+.Comments {
+  position: relative;
+
+  .Comment-lists {
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+  }
+}
