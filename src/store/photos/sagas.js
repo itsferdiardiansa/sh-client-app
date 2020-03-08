@@ -5,15 +5,15 @@ import {
 } from './types'
 
 
-function fetchData() {
-  return fetch(`https://jsonplaceholder.typicode.com/users`)
+function fetchData({ payload: { albumsId } }) {
+  return fetch(`https://jsonplaceholder.typicode.com/albums/${albumsId}/photos`)
       .then(res => res.json())
       .then(json => json)
 }
 
-function* getUsers() {
+function* getPhotos(payload) {
   try {
-    const response = yield call(fetchData)
+    const response = yield call(fetchData, payload)
     
     yield put(fetchRequestSuccess(response))
   } catch(error) {
@@ -21,12 +21,12 @@ function* getUsers() {
   }
 }
 
-function* onFetchUsersStart(params) {
-  yield takeLatest(FETCH_REQUEST_START, getUsers)
+function* onFetchPhotosStart() {
+  yield takeLatest(FETCH_REQUEST_START, getPhotos)
 }
 
-export default function* watchUserSaga() {
+export default function* watchPhotossStart() {
   yield all([
-    call(onFetchUsersStart),
+    call(onFetchPhotosStart),
   ])
 }

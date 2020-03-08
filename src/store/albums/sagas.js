@@ -6,12 +6,12 @@ import {
 
 
 function fetchData() {
-  return fetch(`https://jsonplaceholder.typicode.com/users`)
+  return fetch(`https://jsonplaceholder.typicode.com/albums`)
       .then(res => res.json())
       .then(json => json)
 }
 
-function* getUsers() {
+function* getAlbums() {
   try {
     const response = yield call(fetchData)
     
@@ -21,12 +21,12 @@ function* getUsers() {
   }
 }
 
-function* onFetchUsersStart(params) {
-  yield takeLatest(FETCH_REQUEST_START, getUsers)
+function* onFetchAlbumsStart(params) {
+  yield takeLatest(FETCH_REQUEST_START, getAlbums)
 }
 
-export default function* watchUserSaga() {
+export default function* watchAlbumsStart() {
   yield all([
-    call(onFetchUsersStart),
+    call(onFetchAlbumsStart),
   ])
 }

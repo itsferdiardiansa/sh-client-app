@@ -14,9 +14,13 @@ class PostCollectionContainer extends Component {
     const { postData } = this.props
 
     return(
-      <Post 
-        {...postData}
-      />
+      <React.Fragment>
+        {
+          (postData.isFetching !== null && !postData.isFetching)
+          ? <Post {...postData} />
+          : 'Loading ...'
+        }
+      </React.Fragment>
     )
   }
 }

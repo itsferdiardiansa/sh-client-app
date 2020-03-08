@@ -19,7 +19,7 @@ class PostDetailCollectionContainer extends Component {
         {
           (postData.isFetching !== null && !postData.isFetching)
           ? <PostItem {...postData.response} />
-          : null
+          : 'Loading ...'
         }
       </React.Fragment>
     )

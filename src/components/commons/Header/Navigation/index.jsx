@@ -6,15 +6,11 @@ const Navigation = () => (
   <React.Fragment>
     <div className={styles['User-about']}>
       <div className={styles['User-about__link']}>
-        <Link to="/photos">Photos</Link>
-      </div>
-
-      <div className={styles['User-about__link']}>
         <Link to="/albums">Albums</Link>
       </div>
 
       <div className={styles['User-about__link']}>
-        <Link to="/users">Friends</Link>
+        <Link to="/users">Users</Link>
       </div>
     </div>
   </React.Fragment>

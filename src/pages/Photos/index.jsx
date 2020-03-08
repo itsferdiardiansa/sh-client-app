@@ -1,10 +1,10 @@
 import React from 'react'
-import Photos from '@/components/photos'
 import styles from './index.module.scss'
+import PhotossCollectionsContainer from '@containers/photossCollectionsContainer'
 
 const PhotosPage = () => (
   <div className={styles['Container']}>
-    <Photos />
+    <PhotossCollectionsContainer />
   </div>
 )
 

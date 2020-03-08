@@ -24,7 +24,7 @@ const Comments = ({ postId }) => {
         {
           (comments.length)
           ? <CommentLists comments={comments} />
-          : null
+          : 'Loading comments ...'
         }
       </div>
     </div>
