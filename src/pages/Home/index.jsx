@@ -1,14 +1,11 @@
 import React from 'react'
-import AddPost from '@/components/posts/Form'
-import PostList from '@/components/posts/Lists'
+import Post from '@/components/posts'
 import styles from './index.module.scss'
 
-const Home = () => (
+const HomePage = () => (
   <div className={styles['Container']}>
-    <AddPost />
-    
-    <PostList />
+    <Post />
   </div>
 )
 
-export default Home
+export default HomePage

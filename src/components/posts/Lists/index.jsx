@@ -1,17 +1,14 @@
 import React from 'react'
 import PostItem from '@/components/posts/Item'
-import styles from './index.module.scss'
 
 const PostLists = () => (
-  <div className={styles['Post']}>
-    <PostItem />
-
-    <PostItem />
-
-    <PostItem />
-
-    <PostItem />
-  </div>
+  <React.Fragment>
+    {
+      [1,2,3].map((item, key) => (
+        <PostItem key={key} />
+      ))
+    }
+  </React.Fragment>
 )
 
 export default PostLists

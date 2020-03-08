@@ -1,5 +1,5 @@
 import React from 'react'
-import CommentReply from '@/components/comments/Reply'
+// import CommentReply from '@/components/comments/Reply'
 import { ReactComponent as AvatarIcon } from '@assets/images/avatar.svg'
 import { ReactComponent as TrashIcon } from '@assets/images/trash.svg'
 import styles from './index.module.scss'
@@ -29,7 +29,7 @@ const CommentItem = () => {
         </div>
       </div>
 
-      <CommentReply />
+      {/* <CommentReply /> */}
     </div>
   )
 }
