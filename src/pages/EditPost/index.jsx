@@ -1,11 +1,11 @@
 import React from 'react'
-import UserLists from '@/components/users/Lists'
+import PostItemForm from '@/components/posts/Form'
 import styles from './index.module.scss'
 
-const UsersPage = () => (
+const EditPage = () => (
   <div className={styles['Container']}>
-    <UserLists />
+    <PostItemForm />
   </div>
 )
 
-export default UsersPage
+export default EditPage

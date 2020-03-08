@@ -1,26 +1,19 @@
-import React from 'react'
-import Comments from '@/components/comments/Lists'
-import { ReactComponent as AvatarIcon } from '@assets/images/avatar.svg'
+import React, { useState } from 'react'
+import ItemHeader from '@/components/posts/ItemHeader'
+import ItemContent from '@/components/posts/ItemContent'
+import Comments from '@/components/comments'
 import styles from './index.module.scss'
 
-const PostItem = () => (
-  <div className={styles['Post']}>
-    <div className={styles['Post__header']}>
-      <div className={styles['User-picture']}>
-        <AvatarIcon alt="User picture" />
-      </div>
+const PostItem = () => {
+  return(
+    <div className={styles['Post']}>
+      <ItemHeader />
 
-      <div className={styles['Title-post']}>
-        <h3>This is title</h3>
-      </div>
+      <ItemContent />
+
+      <Comments />
     </div>
-
-    <div className={styles['Post__content']}>
-      Don’t let slow CI/CD pipelines dictate your day. Switch to CircleCI.
-    </div>
-
-    <Comments />
-  </div>
-)
+  )
+}
 
 export default PostItem

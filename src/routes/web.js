@@ -24,6 +24,17 @@ const routes = [
     component: lazy(() => import('@/pages/Photos'))
   },
   {
+    path: '/posts/:postId',
+    component: lazy(() => import('@/pages/Detail')),
+    exact: true,
+    routes: []
+  },
+  {
+    path: '/edit/:postId',
+    component: lazy(() => import('@/pages/EditPost')),
+    exact: true
+  },
+  {
     component: lazy(() => import('@/pages/404'))
   }
 ]

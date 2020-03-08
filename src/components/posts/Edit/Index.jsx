@@ -2,10 +2,8 @@ import React from 'react'
 import PostItem from '@/components/posts/Item'
 import styles from './index.module.scss'
 
-const DetailPage = () => (
-  <div className={styles['Container']}>
-    <PostItem />
-  </div>
+const EditPost = () => (
+  <PostItem />
 )
 
-export default DetailPage
+export default EditPost
