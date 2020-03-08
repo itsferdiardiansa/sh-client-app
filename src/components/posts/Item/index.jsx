@@ -4,14 +4,21 @@ import ItemContent from '@/components/posts/ItemContent'
 import Comments from '@/components/comments'
 import styles from './index.module.scss'
 
-const PostItem = () => {
+const PostItem = ({id, userId, title, body}) => {
   return(
     <div className={styles['Post']}>
-      <ItemHeader />
+      <ItemHeader 
+        postId={id}
+        title={title} 
+      />
 
-      <ItemContent />
+      <ItemContent 
+        body={body} 
+      />
 
-      <Comments />
+      <Comments
+        postId={id}
+      />
     </div>
   )
 }

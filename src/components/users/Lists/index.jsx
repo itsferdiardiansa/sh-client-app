@@ -2,14 +2,14 @@ import React from 'react'
 import UserItem from '@/components/users/Item'
 import styles from './index.module.scss'
 
-const UserLists = () => (
-  <div className={styles['Users']}>
-    <UserItem />
-
-    <UserItem />
-
-    <UserItem />
-  </div>
+const Users = ({ items }) => (
+  <React.Fragment>
+    {
+      items.map((item, key) => (
+        <UserItem key={key} {...item} />
+      ))
+    }
+  </React.Fragment>
 )
 
-export default UserLists
+export default Users

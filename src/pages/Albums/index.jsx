@@ -1,10 +1,10 @@
 import React from 'react'
-import Albums from '@/components/albums'
+import AlbumsCollectionsContainer from '@containers/albumsCollectionsContainer'
 import styles from './index.module.scss'
 
 const AlbumsPage = () => (
   <div className={styles['Container']}>
-    <Albums />
+    <AlbumsCollectionsContainer />
   </div>
 )
 
