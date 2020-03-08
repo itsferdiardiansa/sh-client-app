@@ -7,21 +7,21 @@ import { Route, Switch, Redirect } from 'react-router-dom'
 const routes = [
   {
     path: '/',
-    component: lazy(() => import('@/pages/home')),
+    component: lazy(() => import('@/pages/Home')),
     exact: true
   },
   {
     path: '/users',
-    component: lazy(() => import('@/pages/users')),
+    component: lazy(() => import('@/pages/Users')),
     exact: true
   },
   {
     path: '/albums',
-    component: lazy(() => import('@/pages/albums'))
+    component: lazy(() => import('@/pages/Albums'))
   },
   {
     path: '/photos',
-    component: lazy(() => import('@/pages/photos'))
+    component: lazy(() => import('@/pages/Photos'))
   },
   {
     component: lazy(() => import('@/pages/404'))

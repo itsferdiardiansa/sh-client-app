@@ -1,0 +1,47 @@
+.Post {
+  height: auto;
+  background-color: #fff;
+  border: 1px solid #dadade;
+  border-radius: 5px;
+  padding: 10px 15px;
+  margin-bottom: 20px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &__header {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+
+    .User-picture {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: #fff;
+      margin-right: 10px;
+      overflow: hidden;
+
+      img {
+        width: auto;
+        height: auto;
+        min-width: 100%;
+        min-height: 100%;
+      }
+    }
+
+    .Title-post {
+      color: #385898;
+      cursor: pointer;
+      text-decoration: none;
+    }
+  }
+
+  &__content {
+    margin-top: 10px;
+    font-size: 12px;
+    text-align: left;
+  }
+}

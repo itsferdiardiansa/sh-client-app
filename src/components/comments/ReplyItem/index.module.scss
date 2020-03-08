@@ -1,0 +1,53 @@
+.Comment {
+  width: 100%;
+  margin-bottom: 10px;
+  display: flex;
+  padding: 10px 0;
+
+  &__user-picture {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #fff;
+    margin-right: 10px;
+    overflow: hidden;
+    display: inline-block;
+
+    img {
+      width: auto;
+      height: auto;
+      min-width: 100%;
+      min-height: 100%;
+    }
+  }
+
+  &__message {
+    width: 100%;
+    text-align: left;
+    font-size: 12px;
+    background-color: #f2f3f5;
+    border-radius: 18px;
+    box-sizing: border-box;
+    color: #1c1e21;
+    line-height: 16px;
+    margin: 0;
+    max-width: 100%;
+    word-wrap: break-word;
+    position: relative;
+    white-space: normal;
+    word-break: break-word;
+    padding: 10px;
+
+    .Username {
+      color: #385898;
+      cursor: pointer;
+      text-decoration: none;
+      font-weight: bold;
+      float: left;
+    }
+
+    .Message {
+      float: left;
+    }
+  }
+}
