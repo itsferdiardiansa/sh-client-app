@@ -4,6 +4,19 @@
   display: flex;
   flex-wrap: wrap;
   padding: 10px 0;
+  position: relative;
+
+  &__delete {
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    cursor: pointer;
+
+    svg {
+      width: 15px;
+      height: 15px;
+    }
+  }
 
   &__user-picture {
     width: 50px;
@@ -13,7 +26,7 @@
     margin-right: 10px;
     overflow: hidden;
     display: inline-block;
-    float: left;
+    // float: left;
 
     img {
       width: auto;

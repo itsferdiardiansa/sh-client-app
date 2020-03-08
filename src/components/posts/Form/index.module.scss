@@ -1,0 +1,105 @@
+.Post {
+  height: auto;
+  position: relative;
+  background-color: #fff;
+  border: 1px solid #dadade;
+  border-radius: 5px;
+  padding: 10px 15px;
+  margin-bottom: 20px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &__header {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+
+    .User-picture {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: #fff;
+      margin-right: 10px;
+      overflow: hidden;
+
+      img {
+        width: auto;
+        height: auto;
+        min-width: 100%;
+        min-height: 100%;
+      }
+    }
+
+    .Title-post {
+      width: 100%;
+      color: #385898;
+      cursor: pointer;
+      text-decoration: none;
+
+      .Input-title {
+        width: 100%;
+        border: none;
+
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+  }
+
+  &__content {
+    margin-top: 10px;
+    font-size: 12px;
+    text-align: left;
+
+    .Input-content {
+      width: 100%;
+      min-height: 150px;
+      height: auto;
+      resize: none;
+      padding: 5px 10px;
+      font-size: 12px;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  &__action {
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-end;
+
+    button {
+      border: 1px solid;
+      border-radius: 2px;
+      box-sizing: content-box;
+      font-size: 12px;
+      -webkit-font-smoothing: antialiased;
+      font-weight: bold;
+      justify-content: center;
+      padding: 0 8px;
+      position: relative;
+      text-align: center;
+      text-shadow: none;
+      vertical-align: middle;
+      color: #fff;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+
+    .Cancel {
+      color: #dadade;
+    }
+
+    .Save {
+      background-color: #4267b2;
+      border-color: #4267b2;
+      margin-left: 10px;
+    }
+  }
+}

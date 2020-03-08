@@ -8,8 +8,6 @@ const CommentLists = () => (
       <CommentItem />
 
       <CommentItem />
-
-      <CommentItem />
     </div>
   </div>
 ) 

@@ -1,11 +1,11 @@
 import React from 'react'
-import PostItem from '@/components/posts/Item'
+import PostItemForm from '@/components/posts/Form'
 import styles from './index.module.scss'
 
-const DetailPost = () => (
+const EditPost = () => (
   <div className={styles['Container']}>
-    <PostItem />
+    <PostItemForm />
   </div>
 )
 
-export default DetailPost
+export default EditPost
