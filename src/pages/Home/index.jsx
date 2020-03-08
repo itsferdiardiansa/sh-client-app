@@ -5,9 +5,7 @@ import styles from './index.module.scss'
 
 const Home = () => (
   <div className={styles['Container']}>
-    {/* <div className={style['Add-post']}> */}
-      <AddPost />
-    {/* </div> */}
+    <AddPost />
     
     <PostList />
   </div>

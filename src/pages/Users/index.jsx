@@ -1,7 +1,11 @@
 import React from 'react'
+import UserLists from '@/components/users/Lists'
+import styles from './index.module.scss'
 
 const Users = () => (
-  <h1>Users page</h1>
+  <div className={styles['Container']}>
+    <UserLists />
+  </div>
 )
 
 export default Users
