@@ -67,18 +67,6 @@ jobs:
           command: |
             docker push ferdiardiansa/social-media:latest
     
-  Deploy-To-AWS:
-    machine: true
-    working_directory: ~/app
-
-    steps:
-      - checkout
-      
-      - run: 
-          name: 'Connect to AWS EC2'
-          command: |
-            ls -l
-
 workflows:
   version: 2
   Dock_Workflow:
@@ -94,8 +82,3 @@ workflows:
             branches:
               only: 
                 - build/create-social-media
-      - Deploy-To-AWS:
-          filters:
-            branches:
-              only: master
-              
