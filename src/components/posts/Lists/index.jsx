@@ -1,11 +1,14 @@
 import React from 'react'
 import PostItem from '@/components/posts/Item'
 
-const PostLists = () => (
+const PostLists = ({items, ...otherProps}) => (
   <React.Fragment>
     {
-      [1,2,3].map((item, key) => (
-        <PostItem key={key} />
+      items.map((item, key) => (
+        <PostItem 
+          key={key}
+          {...item} 
+        />
       ))
     }
   </React.Fragment>

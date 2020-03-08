@@ -3,11 +3,15 @@ import AddPost from './Form'
 import PostLists from './Lists'
 import styles from './index.module.scss'
 
-const Posts = () => (
+const Posts = ({response, isFetching}) => (
   <div className={styles['Post']}>
     <AddPost />
 
-    <PostLists />
+    {
+      (response.length && !isFetching)
+      ? <PostLists items={response} />
+      : null 
+    }
   </div>
 )
 

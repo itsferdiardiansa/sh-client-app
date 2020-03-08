@@ -14,7 +14,7 @@ const DropdownMwnu = ({ handleDeletePost }) => (
   </div>
 )
 
-const ItemHeader = () => {
+const ItemHeader = ({postId, title}) => {
   const [toggleMenu, setToggleMenu] = useState(false)
 
   const handleToggleMenu = () => {
@@ -34,8 +34,8 @@ const ItemHeader = () => {
       </div>  
 
       <div className={styles['Title-post']}>
-        <Link to="/posts/12">
-          <h3>This is title</h3>
+        <Link to={`/posts/${postId}`}>
+          <h3>{title}</h3>
         </Link>
       </div>
 
