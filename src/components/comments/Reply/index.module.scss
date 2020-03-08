@@ -1,0 +1,19 @@
+.Comment {
+  width: 82%;
+  position: relative;
+  margin-left: 50px;
+
+  &__btn-action {
+    display: block;
+    text-align: left;
+    margin-left: 10px;
+
+    .Reply-btn {
+      color: #90949c;
+      display: inline-block;
+      font-size: 12px;
+      line-height: 12px;
+      cursor: pointer;
+    }
+  }
+}
