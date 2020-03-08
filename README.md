@@ -3,7 +3,7 @@ This project was
  - Docker
  - CircleCI
  - AmzonEC2
- 
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -23,4 +23,4 @@ Public repository
 Open [https://github.com/itsferdiardiansa/sh-client-app](https://github.com/itsferdiardiansa/sh-client-app) to view it in the browser
 
 Live Demo
-Open [http://ec2-18-141-139-214.ap-southeast-1.compute.amazonaws.com/users](http://ec2-18-141-139-214.ap-southeast-1.compute.amazonaws.com/users) to view it in the browser
+Open [http://ec2-18-141-139-214.ap-southeast-1.compute.amazonaws.com](http://ec2-18-141-139-214.ap-southeast-1.compute.amazonaws.com) to view it in the browser
