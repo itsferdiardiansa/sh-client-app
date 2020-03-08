@@ -1,0 +1,13 @@
+.User-about {
+  display: flex;
+  align-items: center;
+
+  &__link {
+
+    a {
+      padding: 0 20px;
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+}
