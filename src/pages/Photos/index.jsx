@@ -1,7 +1,11 @@
 import React from 'react'
+import Photos from '@/components/photos'
+import styles from './index.module.scss'
 
-const Photos = () => (
-  <h1>Photos page</h1>
+const PhotosPage = () => (
+  <div className={styles['Container']}>
+    <Photos />
+  </div>
 )
 
-export default Photos
+export default PhotosPage
