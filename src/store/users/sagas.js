@@ -6,12 +6,12 @@ import {
 
 
 function fetchData() {
-  return fetch(`https://jsonplaceholder.typicode.com/comments`)
+  return fetch(`https://jsonplaceholder.typicode.com/users`)
       .then(res => res.json())
       .then(json => json)
 }
 
-function* getComments() {
+function* getUsers() {
   try {
     const response = yield call(fetchData)
     
@@ -21,12 +21,12 @@ function* getComments() {
   }
 }
 
-function* onFetchCommentsStart() {
-  yield takeLatest(FETCH_REQUEST_START, getComments)
+function* onFetchUsersStart(params) {
+  yield takeLatest(FETCH_REQUEST_START, getUsers)
 }
 
-export default function* watchCommentsSaga() {
+export default function* watchPostSaga() {
   yield all([
-    call(onFetchCommentsStart),
+    call(onFetchUsersStart),
   ])
 }

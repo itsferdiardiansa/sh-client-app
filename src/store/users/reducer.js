@@ -1,8 +1,7 @@
 import {
   FETCH_REQUEST_START,
   FETCH_REQUEST_SUCCESS,
-  FETCH_REQUEST_FAILURE,
-  SET_POST_COMMENT
+  FETCH_REQUEST_FAILURE
 } from './types'
 
 const INITIAL_STATE = {
@@ -11,7 +10,7 @@ const INITIAL_STATE = {
   response: {},
 }
 
-export const postReducer = (state = INITIAL_STATE, action) => {
+export const userReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case FETCH_REQUEST_START:
       return {
@@ -35,4 +34,4 @@ export const postReducer = (state = INITIAL_STATE, action) => {
   }
 }
 
-export default postReducer
+export default userReducer
