@@ -6,15 +6,25 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "immutable": "^4.0.0-rc.12",
+    "node-sass": "^4.13.1",
     "react": "^16.13.0",
+    "react-app-rewired": "^2.1.5",
     "react-dom": "^16.13.0",
-    "react-scripts": "3.4.0"
+    "react-redux": "^7.2.0",
+    "react-router": "^5.1.2",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.4.0",
+    "redux": "^4.0.5",
+    "redux-saga": "^1.1.3",
+    "reselect": "^4.0.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "integration:test": "CI=true react-scripts test --env=jsdom",
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-scripts test --env=jsdom",
+    "integration:test": "CI=true react-app-rewired test --env=jsdom",
+    "deploy": "./node_modules/.bin/firebase deploy --token $FIREBASE_HOSTING_TOKEN --only hosting",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -31,5 +41,18 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "^@/(.*)$": "<rootDir>/src/$1",
+      "^@components/(.*)$": "<rootDir>/src/components/$1",
+      "^@containers/(.*)$": "<rootDir>/src/containers/$1",
+      "^@store/(.*)$": "<rootDir>/src/store/$1",
+      "^@assets/(.*)$": "<rootDir>/src/assets/$1",
+      "^@hoc/(.*)$": "<rootDir>/src/hoc/$1",
+      "^@micro-ui/(.*)$": "<rootDir>/src/micro-ui/$1",
+      "^@utils/(.*)$": "<rootDir>/src/utils/$1",
+      "^@helpers/(.*)$": "<rootDir>/src/helpers/$1"
+    }
   }
 }
